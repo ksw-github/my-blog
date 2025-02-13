@@ -19,7 +19,7 @@ const PostIist = () => {
 
   return (
     <Wrapper>
-      <h1>Post-list</h1>
+      <h1>Post</h1>
       <form>
         <Link to="/new-post">글쓰기</Link>
         {posts.length === 0 ? (
