@@ -14,7 +14,7 @@ function App() {
         <Route path="/post-list" element={<PostIist />} />
         <Route path="/post/:index" element={<PostItem />} />
         <Route path="/new-post" element={<PostForm />} />
-        <Route path="/edit-post" element={<PostForm />} />
+        <Route path="/edit-post/:index" element={<PostForm />} />
       </Routes>
     </Router>
   );

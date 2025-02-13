@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   text-align: center;
   width: 500px;
   margin: 0 auto;
+  background-color: rgb(0, 0, 0, 0.1);
 `;
 
 const Title = styled.div`

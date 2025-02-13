@@ -26,16 +26,17 @@ const PostForm = () => {
 
   const submit = () => {
     const posts = loadPosts();
-    const newpost = { title, content, date };
+    const newPost = { title, content, date };
 
     if (index !== undefined) {
-      posts[index] = newpost;
+      posts[index] = newPost;
+      savePosts(posts);
+      nav(`/post/${index}`);
     } else {
-      posts.push(newpost);
+      posts.push(newPost);
+      savePosts(posts);
+      nav("/post-list");
     }
-
-    savePosts(posts);
-    nav("/post-list");
   };
 
   const cancel = () => {
@@ -44,6 +45,7 @@ const PostForm = () => {
 
   return (
     <Wrapper>
+      <p>{index !== undefined ? "게시글 수정" : "게시글 등록"}</p>
       <form onSubmit={submit}>
         <input
           type="text"
@@ -61,7 +63,7 @@ const PostForm = () => {
           style={{ width: "170px", height: "200px" }}
         />
         <br />
-        <button type="submit">저장</button>
+        <button type="submit">{index !== undefined ? "수정" : "저장"}</button>
         <button onClick={cancel}>취소</button>
       </form>
     </Wrapper>
