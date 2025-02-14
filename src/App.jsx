@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header";
-import Home from "./pages/home";
+import ToDoList from "./components/todo-list";
 import PostIist from "./components/post-list";
 import PostItem from "./components/post-item";
 import PostForm from "./components/post-form";
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<ToDoList />} />
         <Route path="/post-list" element={<PostIist />} />
         <Route path="/post/:index" element={<PostItem />} />
         <Route path="/new-post" element={<PostForm />} />

@@ -7,7 +7,8 @@ const Wrapper = styled.div`
   text-align: center;
   width: 500px;
   margin: 0 auto;
-  background-color: rgb(0, 0, 0, 0.1);
+  // background-color: rgb(0, 0, 0, 0.1);
+  // border: 1px solid black;
 `;
 
 const Title = styled.div`
@@ -58,12 +59,23 @@ const PostItem = () => {
 
   return (
     <Wrapper>
-      <Title>{post.title}</Title>
-      <Text>{post.content}</Text>
-      <p>{post.date}</p>
-      <button onClick={edit}>수정</button>
-      <button onClick={del}>삭제</button>
-      <button onClick={cancel}>취소</button>
+      <h1>Post</h1>
+      <div
+        style={{ border: "1px solid gray", backgroundColor: "rgb(0,0,0,0.1)" }}
+      >
+        <Title>{post.title}</Title>
+        <Text>{post.content}</Text>
+        <p>{post.date}</p>
+        <button type="button" onClick={edit}>
+          수정
+        </button>
+        <button type="button" onClick={del}>
+          삭제
+        </button>
+        <button type="button" onClick={cancel}>
+          취소
+        </button>
+      </div>
     </Wrapper>
   );
 };

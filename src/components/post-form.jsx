@@ -45,7 +45,7 @@ const PostForm = () => {
 
   return (
     <Wrapper>
-      <p>{index !== undefined ? "게시글 수정" : "게시글 등록"}</p>
+      <h3>{index !== undefined ? "게시글 수정" : "게시글 등록"}</h3>
       <form onSubmit={submit}>
         <input
           type="text"
@@ -64,7 +64,9 @@ const PostForm = () => {
         />
         <br />
         <button type="submit">{index !== undefined ? "수정" : "저장"}</button>
-        <button onClick={cancel}>취소</button>
+        <button type="button" onClick={cancel}>
+          취소
+        </button>
       </form>
     </Wrapper>
   );

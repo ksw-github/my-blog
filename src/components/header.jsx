@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 const Header = () => {
   return (
     <Wrapper>
-      <Link to="/">Home</Link>
+      <Link to="/">ToDoList</Link>
       <Link to="/post-list">Post</Link>
     </Wrapper>
   );
