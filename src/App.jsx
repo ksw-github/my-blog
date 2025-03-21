@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<ToDoList />} />
+        <Route path="/my-blog" element={<ToDoList />} />
         <Route path="/post-list" element={<PostIist />} />
         <Route path="/post/:index" element={<PostItem />} />
         <Route path="/new-post" element={<PostForm />} />
