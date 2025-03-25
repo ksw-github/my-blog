@@ -7,7 +7,7 @@ import PostForm from "./components/post-form";
 
 function App() {
   return (
-    <Router basename="/my-blog">
+    <Router basename="/my-blog/">
       <Header />
       <Routes>
         <Route path="/" element={<ToDoList />} />
