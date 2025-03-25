@@ -73,7 +73,7 @@ const PostItem = () => {
           삭제
         </button>
         <button type="button" onClick={cancel}>
-          취소
+          이전
         </button>
       </div>
     </Wrapper>

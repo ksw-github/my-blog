@@ -22,7 +22,8 @@ const ToDoList = () => {
     saveTodos(saveTodo);
   };
 
-  const addClick = () => {
+  const addClick = (e) => {
+    e.preventDefault();
     if (inputValue.trim()) {
       addTodo(inputValue);
       setInputValue("");

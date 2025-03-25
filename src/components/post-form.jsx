@@ -24,7 +24,8 @@ const PostForm = () => {
     }
   }, [index]);
 
-  const submit = () => {
+  const submit = (e) => {
+    e.preventDefault();
     const posts = loadPosts();
     const newPost = { title, content, date };
 
