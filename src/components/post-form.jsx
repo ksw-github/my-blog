@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { loadPosts, savePosts } from "./utils";
 import styled from "styled-components";
+import { URL } from "../router/constants";
 
 const Wrapper = styled.div`
   text-align: center;
@@ -32,16 +33,16 @@ const PostForm = () => {
     if (index !== undefined) {
       posts[index] = newPost;
       savePosts(posts);
-      nav(`/post/${index}`);
+      nav(`${URL}post/${index}`);
     } else {
       posts.push(newPost);
       savePosts(posts);
-      nav("/post-list");
+      nav(`${URL}post-list`);
     }
   };
 
   const cancel = () => {
-    nav("/post-list");
+    nav(`${URL}post-list`);
   };
 
   return (

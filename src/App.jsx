@@ -4,17 +4,18 @@ import ToDoList from "./components/todo-list";
 import PostIist from "./components/post-list";
 import PostItem from "./components/post-item";
 import PostForm from "./components/post-form";
+import { URL } from "./router/constants";
 
 function App() {
   return (
-    <Router basename="/my-blog/">
+    <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<ToDoList />} />
-        <Route path="/post-list" element={<PostIist />} />
-        <Route path="/post/:index" element={<PostItem />} />
-        <Route path="/new-post" element={<PostForm />} />
-        <Route path="/edit-post/:index" element={<PostForm />} />
+        <Route path={URL} element={<ToDoList />} />
+        <Route path={`${URL}post-list`} element={<PostIist />} />
+        <Route path={`${URL}post/:index`} element={<PostItem />} />
+        <Route path={`${URL}new-post`} element={<PostForm />} />
+        <Route path={`${URL}edit-post/:index`} element={<PostForm />} />
       </Routes>
     </Router>
   );

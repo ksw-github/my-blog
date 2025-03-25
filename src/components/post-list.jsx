@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { loadPosts } from "../components/utils";
+import { URL } from "../router/constants";
 
 const Wrapper = styled.div`
   text-align: center;
@@ -21,7 +22,7 @@ const PostIist = () => {
     <Wrapper>
       <h1>Post</h1>
       <form>
-        <Link to="/new-post">글쓰기</Link>
+        <Link to={`${URL}new-post`}>글쓰기</Link>
         {posts.length === 0 ? (
           <p>게시글이 없습니다</p>
         ) : (
@@ -32,7 +33,7 @@ const PostIist = () => {
                 backgroundColor: "rgb(0,0,0,0.1)",
               }}
             >
-              <Link to={`/post/${index}`}>
+              <Link to={`${URL}post/${index}`}>
                 <h3>{post.title}</h3>
                 <p>{post.date}</p>
               </Link>

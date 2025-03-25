@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { loadPosts, savePosts } from "./utils";
+import { URL } from "../router/constants";
 
 const Wrapper = styled.div`
   text-align: center;
@@ -46,15 +47,15 @@ const PostItem = () => {
     const posts = loadPosts();
     posts.splice(index, 1);
     savePosts(posts);
-    nav("/post-list");
+    nav(`${URL}post-list`);
   };
 
   const edit = () => {
-    nav(`/edit-post/${index}`);
+    nav(`${URL}edit-post/${index}`);
   };
 
   const cancel = () => {
-    nav("/post-list");
+    nav(`${URL}post-list`);
   };
 
   return (
